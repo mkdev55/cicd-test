@@ -14,13 +14,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - name: version
+      run: ./ver-mangae.bash
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag cicd-test:$(date +%s)
+      run: docker build . --file Dockerfile --tag cicd-test:$v
     - name: Login into Dockerhub
       run: docker login -u mengkheang -p dckr_pat_Usci7rplX5muCuw6Kz6es9ujFyQ
     - name: push to registry
       run: docker images 
-    - name: test
-      run: |
-            echo $(date + %s)
     
