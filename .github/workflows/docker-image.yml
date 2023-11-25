@@ -22,8 +22,8 @@ jobs:
       run: docker login -u mengkheang -p dckr_pat_Usci7rplX5muCuw6Kz6es9ujFyQ
     - name: push to registry
       run: |
-      docker tag cicd-test:$(cat version.txt) mengkheang/cicd-test:$(cat version.txt)
-      docker push mengkheang/cicd-test:$(cat version.txt)
-      
-      echo 'finished'
+          docker tag cicd-test:$(cat version.txt) mengkheang/cicd-test:$(cat version.txt)
+          docker push mengkheang/cicd-test:$(cat version.txt)
+          
+          echo 'finished'
     
