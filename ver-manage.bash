@@ -8,5 +8,5 @@ fi
 
 next_ver=$( echo "$previus + 0.1" | bc)
 
-echo $next_ver >> version.txt
+echo "$next_ver" > version.txt
 
