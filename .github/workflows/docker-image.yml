@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: version
-      run: ls
+      run: ./ver-manage.bash
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag cicd-test:$v
     - name: Login into Dockerhub
